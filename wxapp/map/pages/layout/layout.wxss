@@ -1,0 +1,25 @@
+.flex-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+.flex-item {
+    width: 700rpx;
+    height: 200rpx;
+    text-align: center;
+    line-height: 200rpx;
+    color: #fff;
+  }
+.bc_green {
+    background-color: green;
+  }
+.bc_red {
+    background-color: red;
+    align-self: flex-end;
+}
+.bc_blue {
+    background-color: blue;
+}  

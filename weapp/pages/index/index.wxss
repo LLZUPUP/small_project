@@ -1,0 +1,105 @@
+.titleBar {
+  border-bottom: 1rpx solid #eee;
+  padding: 0 30rpx 10rpx;
+  display: flex;
+  align-items: center;
+}
+.titleBar .status {
+  flex: 1;
+}
+/* 主元素拿到其他子元素本身该有的大小外，所有的空间 */
+.add {
+  /* flex:1; */
+}
+.titleBar .status text {
+  display: inline-block;
+  font-size: 12pt;
+  color: #999;
+  padding: 10rpx;
+  margin-right: 15rpx;
+  border:1rpx solid #999;
+  border-radius: 10rpx;
+}
+.titleBar .status text.active {
+  /* color: red; */
+  background-color: #999;
+  color: #fff;
+}
+/* 现在来到了mvvm 时代，现在切换类名已经不是靠dom编程 */
+/* 在小程序里面想都不要想用dom编程修改类名 */
+
+/* 弹出层来做 移动端 小 z-index 来制造层的感觉 */
+.addForm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(0,0,0,.4);
+}
+.addForm .addForm-div {
+  background: #fff;
+  padding: 30rpx;
+}
+.weui-input {
+  height: 2.58823529em;
+  min-height: 2.588235529em;
+  line-height: 2.588235529em;
+}
+.addForm .addForm-div .weui-input {
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+  padding: 5rpx 20rpx;
+  font-size: 12pt;
+  margin-bottom: 10rpx;
+}
+.weui-btn:first-child {
+  margin-top: 0;
+}
+.addForm .addForm-div .addForm-btn button {
+  margin-right: 15rpx;
+}
+
+.lists {
+  height: 0;
+  flex: 1;
+  padding: 15rpx 0rpx;
+}
+.lists .item {
+  border-bottom: 1px dotted #eee;
+  position: relative;
+  overflow: hidden;
+}
+.lists .item .content {
+  display: flex;
+  padding: 15rpx -30rpx;
+  align-items: center;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 694rpx;
+  z-index: 10;
+  background-color: #fff;
+}
+.lists .item icon {
+  padding: 15rpx 0 10rpx;
+}
+icon {
+  vertical-align: middle;
+}
+.lists .item .time {
+  font-size: 9pt;
+  color: #999;
+}
+.lists .item text {
+  font-size: 11pt;
+  color: #444444;
+  padding: 0 10rpx;
+}
+.lists .item .title {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
