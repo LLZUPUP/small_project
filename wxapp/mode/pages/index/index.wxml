@@ -1,0 +1,28 @@
+<!-- <swiper current="{{current}}">
+  <swiper-item>
+    <view>哈哈哈哈</view>
+  </swiper-item>
+  <swiper-item>
+    <view>哼哼</view>
+  </swiper-item>
+  <swiper-item>
+    <view>啊呀</view>
+  </swiper-item>
+  <swiper-item>
+    <view>哇哦</view>
+  </swiper-item>
+</swiper> -->
+<view class="swiper">
+  <!-- <view class="swiper-item {{sta == '1'?'active':''}}" bindtap="showClick" data-status="1">
+    adsada
+  </view>
+  <view class="swiper-item {{sta == '2'?'active':''}}" bindtap="showClick" data-status="2">
+    adsadaasd
+  </view><view class="swiper-item {{sta == '3'?'active':''}}" bindtap="showClick" data-status="3">
+    adsadasda
+  </view> -->
+  <progress percent="80" show-info color="red" stroke-width="1" active />
+  <progress percent="60" show-info active active-mode="backwards"></progress>
+  <button size="mini" hover-class="active" type="warn">哈哈哈哈哈</button>
+
+</view>

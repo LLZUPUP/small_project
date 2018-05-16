@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+    <link rel="stylesheet" href="./common.css">
+    <script>
+        (function(w) {
+            // window 是js 全局 dom document 只是其中一部分
+            // 目前我们接触到的有window.loaction.href;
+            // navigator得到浏览器的型号   lbs 定位经纬度
+            // 陀螺仪  存储localStorage
+            let s = w.document;
+            let r = s.documentElement;
+            let colWidth = window.screen.width/10;
+            // console.log(colWidth)
+            r.style.fontSize = colWidth + 'px';
+            // console.log(r)
+            
+        })(window)
+    </script>
+</head>
+<body>
+    <!-- 移动端适配，可以用百分比，flex 弹性布局， em 相对于自身的font-size
+    rem  相对于html的font-size 
+    em   px换算 rem   px换算 rem html 就可以 -->
+    <!-- width = device-width
+    iphone 小手机 大小是375pt物理大小
+    html 37.5px 非常好的一个百分比关系 10rem == 设备宽度
+    iphone8 750px
+    iphone8 plus 414pt
+    41.4px html font-size -->
+    <!-- <div class="box">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="box">
+        <div class="item" style="width:6rem;"></div>
+        <div class="item" style="width:4rem;"></div>
+    </div> -->
+
+</body>
+</html>
