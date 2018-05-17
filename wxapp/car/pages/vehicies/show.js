@@ -1,19 +1,41 @@
 // pages/wehicies/show.js
+import testDrive from '../../modules/test-drive'
+const app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    entity: null
   },
+  
 
   /**
    * 生命周期函数--监听页面加载
    */
+  testDrive,
+  preview(e) {
+    const slidesName = e.target.dataset.slides;
+    const index = e.target.dataset.index;
+    const slides = this.data.entity.meta[slidesName]
+    const images = []
+    slides.map((item)=>{
+      images.push(item.image)
+    })
+    wx.previewImage({
+      urls: images,
+      current: images[index]
+    })
+  },
   onLoad: function (options) {
       const id = options.id;
       console.log(id);
+      const entity = app.globalData.vehicles.filter((item)=>{
+        return item.id == id
+      })
+      this.setData({
+        entity:entity[0]
+      })
+      wx:setNavigationBarTitle({
+        title: this.data.entity.header
+      })
   },
 
   /**

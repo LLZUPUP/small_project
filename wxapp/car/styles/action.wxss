@@ -2,3 +2,6 @@
     text-align: center;
     padding: 100rpx;
 }
+.action .description {
+    margin-bottom: 48px;
+}

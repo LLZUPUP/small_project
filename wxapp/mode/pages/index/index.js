@@ -4,29 +4,30 @@ const app = getApp()
 
 Page({
   data: {
-    current: 0,
+   items:[
+     {
+       name: 'USA', value: '美国'
+     },
+     {
+       name: 'CHN', value: '中国', checked: 'true'
+     },
+     {
+       name: 'BRA', value: '巴西'
+     }
+   ]
     
     
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    setTimeout(()=>{
-      this.setData({
-        current: 1
-      })
-    },1500)
-  },
-  showClick: function(e) {
+  checkboxChange: function(e) {
+    console.log('checkbox发现change事件，携带value值为'+e.detail.value)
     console.log(e)
-    const sta = e.target.dataset.status;
+  },
+  bindInput:function(e) {
     this.setData({
-      sta: sta
+      inputValue:e.detail.value
     })
+    
   }
   
 })

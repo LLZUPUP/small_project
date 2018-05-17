@@ -18,7 +18,7 @@ Page({
         this.setData({
           isLoading: false,
           entities: res.data.data.articles,
-          currentPage: f
+          currentPage: 1
         })
       }
     })

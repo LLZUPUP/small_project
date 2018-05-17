@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/demo/demo",
+    "pages/index/index",
+    
     "pages/posts/show"
   ],
   "window": {

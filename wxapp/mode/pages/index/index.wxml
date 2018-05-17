@@ -23,6 +23,24 @@
   </view> -->
   <progress percent="80" show-info color="red" stroke-width="1" active />
   <progress percent="60" show-info active active-mode="backwards"></progress>
-  <button size="mini" hover-class="active" type="warn">哈哈哈哈哈</button>
-
+  <button size="mini" hover-class="active" loading="false">哈哈哈哈哈</button>
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}" wx:key="item.id">
+      <checkbox color="yellow" value="{{item.name}}" checked="{{item.checked}}">{{item.value}}
+      </checkbox>
+    </label>
+  </checkbox-group>
 </view>
+
+  <input placeholder="这是一个可以自动聚焦的input" focus="true"></input>
+  <input type="text" password placeholder='密码形式的文本'></input>
+  <input type="text" maxlength="6" placeholder='最大长度为6' minlenth="2"></input>
+  <view>你输入的是：{{inputValue}}</view>
+  <input type="number" bindinput="bindInput"></input>
+  <input type="idcard" value='身份证信息'></input>
+  <input type="digit" placeholder='带小数点的数字键盘'></input>
+  <slider block-size="12" block-color="green" activeColor="red" color="yellow" value="50" min="20" max="80" step="1" show-value></slider>
+  <switch color="red" type="switch" checked></switch>
+  <textarea focus placeholder='请输入您想要输入的内容'></textarea>
+  <navigator url>跳</navigator>
+  <audio src="http://music.baidu.com/song/263511780" controls name='赵乐乐' author="啊翔" poster="/assets/one.jpg"></audio>

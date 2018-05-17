@@ -23,7 +23,7 @@ Page({
       //   description: '标新立异的前卫揽胜'
       // }
       
-    ]
+    ],
   },
   onLoad() {
     this.setData({
