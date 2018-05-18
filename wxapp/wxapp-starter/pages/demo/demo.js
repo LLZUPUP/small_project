@@ -108,5 +108,26 @@ Page({
         })
       }
     })
+  },
+  deleteImage(e) {
+    // console.log(e)
+    var images = this.data.images;
+    var index = e.currentTarget.dataset.index;
+    wx.showModal({
+      title: '提示',
+      content: '确定要删除此图片吗？',
+      success:(res)=> {
+        if(res.confirm) {
+          console.log(index)
+          images.splice(index,1)
+        }else if(res.cancel) {
+          return
+        }
+        this.setData({
+          images
+        })
+      }
+      
+    })
   }
 })

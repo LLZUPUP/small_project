@@ -24,7 +24,7 @@
                 <view class="uploader__bd">
                     <view class="uploader__files">
                         <block wx:for="{{images}}" wx:key="{{item.id}}">
-                            <view class="uploader__file">
+                            <view class="uploader__file" bindlongpress="deleteImage" data-index="{{index}}">
                                 <image class="uploader__img" mode="aspectFill" src="{{item.path}}">
                                 </image>
                             </view>
