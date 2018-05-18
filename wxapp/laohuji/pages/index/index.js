@@ -25,29 +25,29 @@ Page({
     prize:[
       {
         index:1,
-        content:'恭喜你获得请我吃饭一次'
+        content:'content'
       },
       {
         index:2,
-        content:'恭喜你获得请我吃饭一次'
+        content:'content1'
       },{
         index:3,
-        content:'恭喜你获得请我吃饭一次'
+        content:'content2'
       },{
         index:4,
-        content:'恭喜你获得请我吃饭一次'
+        content:'content3'
       },{
         index:5,
-        content:'恭喜你获得请我吃饭一次'
+        content:'content4'
       },{
         index:6,
-        content:'恭喜你获得请我吃饭一次'
+        content:'content5'
       },{
         index:7,
-        content:'恭喜你获得请我吃饭一次'
+        content:'content6'
       },{
         index:8,
-        content:'恭喜你获得请我吃饭一次'
+        content:'content7'
       }
     ]
     // 奖品选中的颜色
@@ -170,8 +170,8 @@ Page({
           content: this.data.prize[this.data.indexSelect].content
         })
       }
-    },100);
-    // console.log(num)
+    },60);
+    console.log(num)
   },
   
 })
