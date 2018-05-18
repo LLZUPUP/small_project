@@ -4,7 +4,7 @@
         <image hidden="{{currentVid == item.id}}" data-vid="{{item.id}}" bindtap="play" src="{{item.image}}" mode="aspectFill">
             <view class="label">{{item.duration}}</view>
         </image>
-        <navigator url="/pages/stories/show?id={{item.id}}" hover-class="none">
+        <navigator url="/pages/stories/stories?id={{item.id}}" hover-class="none">
             <view class="content">
                 <view class="header">{{item.header}}</view>
                 <view class="description">{{item.description}}</view>

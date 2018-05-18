@@ -28,6 +28,9 @@ Page({
       inputValue:e.detail.value
     })
     
+  },
+  getUserinfo(e) {
+    console.log(e)
   }
   
 })

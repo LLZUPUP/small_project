@@ -1,12 +1,19 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/music/music",
+    "pages/music/music-detail/music-detail",
+    "components/item/item",
+    "components/loading/loading",
+    "components/stars/stars-template",
+    "components/swiper/swiper-template"
+    
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#2DC799",
+    "navigationBarTitleText": "乐仿音乐",
+    "navigationBarTextStyle": "white"
   }
+ 
 }

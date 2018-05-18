@@ -44,3 +44,4 @@
   <textarea focus placeholder='请输入您想要输入的内容'></textarea>
   <navigator url>跳</navigator>
   <audio src="http://music.baidu.com/song/263511780" controls name='赵乐乐' author="啊翔" poster="/assets/one.jpg"></audio>
+  <button bindgetuserinfo="getUserinfo" open-type="getUserInfo">点击</button>
