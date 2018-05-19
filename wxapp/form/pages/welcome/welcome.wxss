@@ -38,8 +38,12 @@ page {
     transform: translate3d(0,100%,0);
     animation: rise 3s cubic-bezier(0.19,1,0.22,1) .25s forwards;
 }
-.content .button {
-    margin-left: 400rpx;
+.content button {
+    margin-left: 235rpx;
+    z-index: 11;
+    opacity: 1;
+    border-radius: 50rpx;
+    border: 1px solid #ccc;
 }
 .remind-box {
     flex:1;
@@ -154,8 +158,8 @@ page {
     animation: wave-bg 10.25s linear infinite;
 }
 @keyframes wave {
-    from {transform: translate3d(125rpx,0,0);}
-    to {transform: translate3d(1125rpx,0,0);}
+    from {transform: translateX(125rpx,0,0);}
+    to {transform: translateX(1125rpx,0,0);}
 }
 @keyframes wave-bg {
     from {transform: translate3d(375rpx,0,0);}

@@ -5,13 +5,17 @@
     </view>
     <block wx:else>
         <image class="title" src="/images/more/title8.png"></image>
-        <button   open-type="getUserInfo" bindgetuserinfo="getUserinfo">获取头像昵称</button>
+        
         <view class="content">
-            <view class="hd" style="transform:rotateZ({{angle}}deg);">
-                <image class="logo" src="{{userInfo.avatarUrl}}"></image>
-                <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
-                <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
-            </view>
+                <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserinfo">获取头像昵称</button>
+                <block wx:else>
+                    <view class="hd" style="transform:rotateZ({{angle}}deg);">
+                        <image class="logo" src="{{userInfo.avatarUrl}}"></image>
+                        <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
+                        <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
+                    </view>
+                </block>
+            
             <view class="bd">
                 <image class="smalltitle" src="/images/more/confirm-word1.png"></image>
                 <view class="confirm-btn" bindtap="goToIndex">
