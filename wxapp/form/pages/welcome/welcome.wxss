@@ -39,9 +39,6 @@ page {
     animation: rise 3s cubic-bezier(0.19,1,0.22,1) .25s forwards;
 }
 .content button {
-    margin-left: 235rpx;
-    z-index: 11;
-    opacity: 1;
     border-radius: 50rpx;
     border: 1px solid #ccc;
 }
@@ -101,7 +98,7 @@ page {
 }
 .hd {
     position: absolute;
-    top: 0;
+    top: 50rpx;
     left: 50%;
     width: 1000rpx;
     margin-left: -500rpx;
@@ -143,11 +140,12 @@ page {
         transform:translate3d(0,20rpx,0) rotate(-15deg);
     }
 }
+
 .wave {
     position: absolute;
-    z-index: 3;
-    right: 0;
-    bottom: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
     opacity: 0.725;
     height: 260rpx;
     width: 2250px;
@@ -157,9 +155,10 @@ page {
     z-index: 1;
     animation: wave-bg 10.25s linear infinite;
 }
+
 @keyframes wave {
-    from {transform: translateX(125rpx,0,0);}
-    to {transform: translateX(1125rpx,0,0);}
+    from {transform: translate3d(125rpx,0,0);}
+    to {transform: translate3d(1125rpx,0,0);}
 }
 @keyframes wave-bg {
     from {transform: translate3d(375rpx,0,0);}

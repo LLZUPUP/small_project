@@ -58,9 +58,12 @@ Page({
     })
   },
   getUserinfo(e) {
-    // console.log(e)
-    console.log(this.data.hasUserInfo)
-    console.log(this.data.userInfo)
+    console.log(e)
+    // console.log(this.data.userInfo)
+    this.setData({
+      hasUserInfo: true,
+      userInfo: e.detail.userInfo
+    })
     
   },
   

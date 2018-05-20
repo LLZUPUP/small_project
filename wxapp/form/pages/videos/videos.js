@@ -1,4 +1,4 @@
-// components/stars/stars-template.js
+// pages/videos/videos.js
 Page({
 
   /**

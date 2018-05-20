@@ -1,4 +1,4 @@
-// components/swiper/swiper-template.js
+// pages/videos/video-detail/video-detail.js
 Page({
 
   /**
