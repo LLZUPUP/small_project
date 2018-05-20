@@ -5,7 +5,7 @@ App({
     wx.getStorage({
       key: 'user-info',
       success: (res)=>{
-        // console.log(res)
+        console.log(res)
         // console.log(res.data)
         this.globalData.userInfo = res.data
         // success

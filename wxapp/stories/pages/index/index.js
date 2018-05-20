@@ -41,7 +41,7 @@ Page({
     wx.getStorage({
       key: 'lists',
       success: res => {
-        console.log(res)
+        // console.log(res)
         this.setData({
           lists: res.data
         })
