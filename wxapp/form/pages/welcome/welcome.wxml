@@ -11,8 +11,8 @@
             <block wx:else>
                 <view class="hd" style="transform:rotateZ({{angle}}deg);">
                     <image class="logo" src="{{userInfo.avatarUrl}}"></image>
-                    <!-- <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
-                    <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image> -->
+                     <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
+                    <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image> 
                 </view>
             </block>
             
