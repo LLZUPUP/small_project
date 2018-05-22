@@ -1,0 +1,10 @@
+.input {
+  box-sizing: border-box;
+  width: 690rpx;
+  height: 56rpx;
+  padding-left: 185rpx;
+  background-color: #fff;
+  border-radius: 44rpx;
+  font-size: 0.8rem;
+  box-shadow: 0 0 1rpx #ccc;
+}
