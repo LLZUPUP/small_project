@@ -1,36 +1,65 @@
 //index.js
 //获取应用实例
+import goods from '../../api/goods.js' 
 const app = getApp()
 
 Page({
   data: {
-   items:[
-     {
-       name: 'USA', value: '美国'
-     },
-     {
-       name: 'CHN', value: '中国', checked: 'true'
-     },
-     {
-       name: 'BRA', value: '巴西'
-     }
-   ]
+   num: 1,
+   show: false,
+   totalNum: 0,
+   scaleCart: false,
+   goods: null
+
     
     
   },
   //事件处理函数
-  checkboxChange: function(e) {
-    console.log('checkbox发现change事件，携带value值为'+e.detail.value)
-    console.log(e)
-  },
-  bindInput:function(e) {
+  addCount(e) {
+    let num =this.data.num;
+    num++;
     this.setData({
-      inputValue:e.detail.value
+      num
     })
-    
   },
-  getUserinfo(e) {
-    console.log(e)
+  addToCart(e) {
+    const num = this.data.num;
+    const total = this.data.totalNum;
+    this.setData({
+      show: true
+    });
+    setTimeout(()=>{
+      this.setData({
+        show: false,
+        scaleCart: true
+      });
+      setTimeout(()=>{
+        this.setData({
+          scaleCart: false,
+          hasCarts: true,
+          totalNum: num + total
+        })
+      },200)
+    },300)
+  },
+  onLoad(options) {
+    console.log(options)
+    const id = options.id || 2;
+    console.log(id);
+    let curGoods;
+    for(let i=0;i<goods.length;i++) {
+      if(goods[i].id===id) {
+        curGoods = goods[i];
+        break;
+      }
+    }
+    setTimeout(()=>{
+      this.setData({
+        goods:curGoods
+      })
+    },1000)
+    
   }
+  
   
 })

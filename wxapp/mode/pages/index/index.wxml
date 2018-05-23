@@ -1,47 +1,29 @@
-<!-- <swiper current="{{current}}">
-  <swiper-item>
-    <view>哈哈哈哈</view>
-  </swiper-item>
-  <swiper-item>
-    <view>哼哼</view>
-  </swiper-item>
-  <swiper-item>
-    <view>啊呀</view>
-  </swiper-item>
-  <swiper-item>
-    <view>哇哦</view>
-  </swiper-item>
-</swiper> -->
-<view class="swiper">
-  <!-- <view class="swiper-item {{sta == '1'?'active':''}}" bindtap="showClick" data-status="1">
-    adsada
-  </view>
-  <view class="swiper-item {{sta == '2'?'active':''}}" bindtap="showClick" data-status="2">
-    adsadaasd
-  </view><view class="swiper-item {{sta == '3'?'active':''}}" bindtap="showClick" data-status="3">
-    adsadasda
-  </view> -->
-  <progress percent="80" show-info color="red" stroke-width="1" active />
-  <progress percent="60" show-info active active-mode="backwards"></progress>
-  <button size="mini" hover-class="active" loading="false">哈哈哈哈哈</button>
-  <checkbox-group bindchange="checkboxChange">
-    <label class="checkbox" wx:for="{{items}}" wx:key="item.id">
-      <checkbox color="yellow" value="{{item.name}}" checked="{{item.checked}}">{{item.value}}
-      </checkbox>
-    </label>
-  </checkbox-group>
+<view class="main">
+    <view class="goods-box">
+        <image class="goods-thumb" src="{{goods.image}}"></image>
+        <view class="goods-operation">
+            <text class="goods-operation-num">数量{{num}}</text>
+            <text class="goods-operation-add" bindtap="addCount">+</text>
+            <text class="goods-to-cart" bindtap="addToCart">加入购物车</text>
+            <image class="goods-cart-img" src="/image/cart1.png"></image>
+        </view>
+        <image class="to-carts-icon" wx:if="{{show}}" src="/image/cart1.png"></image>
+        <view class="goods-stock">{{goods.stock}}</view>
+        <view class="goods-title">{{goods.title}}</view>
+        <view class="goods-price">¥{{goods.price}}</view>
+        <navigator url="../cart/cart" open-type="switchTab">
+            <view class="carts-icon {{scaleCart?'on':''}}">
+                <image src="/image/cart2.png"/>
+                <text wx:if="{{hasCarts}}" class="carts-icon-num">{{totalNum}}</text>
+            </view>
+        </navigator>
+    </view>
+    <view class="goods-tab-box">
+        <view class="goods-tab-nav on" data-index="0">商品详情</view>
+        <view class="goods-tab-nav" data-index="1">产品参数</view>
+        <view class="goods-tab-nav" data-index="2">售后保障</view>
+        <view class="goods-content">
+            <view>{{goods.service}}</view>
+        </view>
+    </view>
 </view>
-
-  <input placeholder="这是一个可以自动聚焦的input" focus="true"></input>
-  <input type="text" password placeholder='密码形式的文本'></input>
-  <input type="text" maxlength="6" placeholder='最大长度为6' minlenth="2"></input>
-  <view>你输入的是：{{inputValue}}</view>
-  <input type="number" bindinput="bindInput"></input>
-  <input type="idcard" value='身份证信息'></input>
-  <input type="digit" placeholder='带小数点的数字键盘'></input>
-  <slider block-size="12" block-color="green" activeColor="red" color="yellow" value="50" min="20" max="80" step="1" show-value></slider>
-  <switch color="red" type="switch" checked></switch>
-  <textarea focus placeholder='请输入您想要输入的内容'></textarea>
-  <navigator url>跳</navigator>
-  <audio src="http://music.baidu.com/song/263511780" controls name='赵乐乐' author="啊翔" poster="/assets/one.jpg"></audio>
-  <button bindgetuserinfo="getUserinfo" open-type="getUserInfo">点击</button>
