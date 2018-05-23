@@ -47,16 +47,16 @@
         <view class="count-left">
           <view class="title">严选限时购</view>
           <view class="count-m">
-            <span class="hour">02</span>
-            <span class="colon">:</span>
-            <span class="mins">58</span>
-            <span class="colon">:</span>
-            <span class="secs">37</span>
+            <text class="hour">02</text>
+            <text class="colon">:</text>
+            <text class="mins">58</text>
+            <text class="colon">:</text>
+            <text class="secs">37</text>
           </view>
           <view class="next-title">
-            <span>下一场</span>
-            <span>18:00</span>
-            <span>开始</span>
+            <text>下一场</text>
+            <text>18:00</text>
+            <text>开始</text>
           </view>
         </view>
         <view class="count-right">

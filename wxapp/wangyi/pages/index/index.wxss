@@ -91,7 +91,7 @@
   letter-spacing: .2rem;
   margin-bottom: 10rpx;
 }
-.count-m span:nth-child(odd) {
+.count-m text:nth-child(odd) {
   display: inline-block;
   width: 55rpx;
   height: 50rpx;
@@ -112,7 +112,7 @@
 .next-title {
   margin-top: 20rpx;
 }
-.next-title span {
+.next-title text {
   font-size: 0.8rem;
   color: #808080;
 }
