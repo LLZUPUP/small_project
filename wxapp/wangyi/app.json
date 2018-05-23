@@ -4,7 +4,8 @@
     "pages/search/seach",
     "pages/kinds/kinds",
     "pages/buycar/buycar",
-    "pages/person/person"
+    "pages/person/person",
+    "pages/index/receive/receive"
   ],
   "window": {
     "backgroundTextStyle": "light",
