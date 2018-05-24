@@ -130,4 +130,38 @@
   width: 690rpx;
   height: 330rpx;
 }
+.product {
+  width: 690rpx;
+  height: 476rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.pdt-left {
+  width: 330rpx;
+  height: 476rpx;
+}
+.pdt-right {
+  width: 330rpx;
+  height: 476rpx;
+}
+.pdt-img {
+  width: 330rpx;
+  height: 330rpx;
+  background-color: #f4f4f4;
+}
+.pdt-name {
+  display: block;
+  line-height: 66rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 800;
+  color: #333;
+}
+.pdt-price {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 900;
+  color: red;
+}
 
