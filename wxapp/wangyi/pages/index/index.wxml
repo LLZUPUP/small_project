@@ -217,4 +217,7 @@
         </view>
     </view>
   </view>
+  <view class="home_ft">
+    <view class="ft">更多内容，敬请期待</view>
+  </view>
 </scroll-view>
