@@ -155,7 +155,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-weight: 800;
+  /* font-weight: 800; */
   color: #333;
 }
 .pdt-price {
@@ -163,5 +163,17 @@
   font-size: 1rem;
   font-weight: 900;
   color: red;
+  font-weight: bold;
+  font-family: Arial;
 }
+.look_more {
+  line-height: 110rpx;
+  text-align: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-top: 1rpx solid #ededed;
+  margin-bottom: 20rpx;
+  color: #7b7b7b;
+}
+
 
