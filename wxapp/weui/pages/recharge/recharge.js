@@ -1,11 +1,51 @@
-// pages/electric/electric.js
+// pages/recharge/recharge.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    dorm: {
+      name: '默认寝室',
+      tip: {
+        content: '研11034',
+        color: 'green'
+      }
+    },
+    amounts:[
+      {
+        value:50,
+        checked:false
+      },
+      {
+        value:100,
+        checked:false
+      },
+      {
+        value:150,
+        checked:false
+      },
+      {
+        value:200,
+        checked:false
+      },
+      {
+        value:250,
+        checked:false
+      },
+    ],
+    btn_disabled: true
+  },
+  bindAmountChange(e) {
+    let amounts = this.data.amounts;
+    let strVal = e.detail.value;
+    for(let amount of amounts) {
+      amount.checked = amount.value ==strVal;
+    }
+    this.setData({
+      amounts,
+      btn_disabled: false
+    })
   },
 
   /**
@@ -27,14 +67,6 @@ Page({
    */
   onShow: function () {
   
-  },
-  reCharge(e) {
-    wx.navigateTo({
-      url: '/pages/recharge/recharge'
-    })
-    wx.setNavigationBarTitle({
-      title: '充值'
-    })
   },
 
   /**

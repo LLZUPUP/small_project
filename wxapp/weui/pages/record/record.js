@@ -1,13 +1,27 @@
-// pages/electric/electric.js
+// pages/record/record.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    startDate: '2018-05-25',
+    endPickerStart:'2018-05-25'
   },
-
+  bindDateChange(e) {
+    const type = e.currentTarget.dataset.type;
+    console.log(type)
+    if(type == 'startPicker') {
+      this.setData({
+        startDate: e.detail.value,
+        endPickerStart: e.detail.value
+      })
+    }else {
+      this.setData({
+        endDate: e.detail.value,
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -27,14 +41,6 @@ Page({
    */
   onShow: function () {
   
-  },
-  reCharge(e) {
-    wx.navigateTo({
-      url: '/pages/recharge/recharge'
-    })
-    wx.setNavigationBarTitle({
-      title: '充值'
-    })
   },
 
   /**
