@@ -37,6 +37,7 @@ Page({
     btn_disabled: true
   },
   bindAmountChange(e) {
+    console.log(e)
     let amounts = this.data.amounts;
     let strVal = e.detail.value;
     for(let amount of amounts) {

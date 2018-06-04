@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/record/record",
-    "pages/recharge/recharge",
     "pages/my/my",
+    "pages/recharge/recharge",
+    "pages/record/record",
+    
+    
     "pages/index/index",
     "pages/electric/electric",
     "pages/card/card",
