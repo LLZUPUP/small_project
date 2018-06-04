@@ -52,7 +52,7 @@ page,.main {
     height: 4rpx;
     background-color: #AB956D;
 }
-.product-list {
+ .product-list {
     display: inline-block;
     width: 160rpx;
     height: 160rpx;
@@ -67,4 +67,4 @@ page,.main {
     width: 80rpx;
     height: 80rpx;
     margin-bottom: 20rpx;
-}
+} 
