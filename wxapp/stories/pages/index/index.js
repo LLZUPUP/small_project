@@ -6,7 +6,7 @@ Page({
   data: {
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    addShow: false,
+    addShow: true,
     focus: false,
     addText: '',
     lists: []

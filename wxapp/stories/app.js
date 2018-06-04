@@ -6,7 +6,7 @@ App({
       key: 'user-info',
       success: (res)=>{
         console.log(res)
-        // console.log(res.data)
+        console.log(res.data)
         this.globalData.userInfo = res.data
         // success
       }
