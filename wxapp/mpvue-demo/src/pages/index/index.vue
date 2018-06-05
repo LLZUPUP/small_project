@@ -10,11 +10,10 @@
       <li v-key='i' v-for="(todo,i) in todos" :class="{'done':todo.status}" @click="toggle(i)">{{todo.content}}</li>
       <li>{{todoNum}}/{{todos.length}}</li>
     </ul>
-  </div>  
+  </div> 
 </template>
 
 <script>
-
 export default {
   data () {
     return {
@@ -58,7 +57,8 @@ export default {
    },
    clearTodo() {
      this.todos = [];
-   }
+   },
+   
   },
     
 
