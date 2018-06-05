@@ -19,7 +19,7 @@ const wxRequest = async(params ={},url) => {
         data: data,
         header: {'Content-Type':'application/json'}
     })
-    return res
+    return res;
 }
 
 
