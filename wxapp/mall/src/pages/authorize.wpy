@@ -25,6 +25,15 @@
         config = {
             navigationBarTitleText: '授权登录'
         }
+        async onLoad() {
+            let res = await wepy.getSetting();
+            console.log(res)
+            if((res.authSetting)['scope.userInfo']) {
+                wepy.switchTab({
+                    url: '/pages/home'
+                })
+            }
+        }
         // async 对函数内部有异步操作变同步的声明
         async onGotUserInfo(e) {
             console.log(e);
@@ -46,12 +55,20 @@
                     });
                     console.log(rlt)
                     if(rlt.result) {
-
+                        let data = rlt.data;
+                        if(data.openid) {
+                            wepy.setStorageSync(USER_SPECIAL_INFO,data.openid);
+                        }
                     }else {
-                        wepy.showModal({
+                        let res = await wepy.showModal({
                             title: 'appid有误',
                             content: '授权失败'
                         })
+                        if(res.confirm) {
+                            wepy.switchTab({
+                                url: '/pages/home'
+                            })
+                        }
                     }
                 }
             }
