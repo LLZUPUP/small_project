@@ -1,0 +1,53 @@
+<template>
+        <view>
+            <!-- 小程序 wxml组件 -->
+        </view>
+        <!-- 首页列表 不再注意细节 而是分组件-->
+        <!-- 组件   占位 暂无数据的提示 -->
+        <!-- 幻灯片 -->
+        <discover></discover>
+        <bottomLoadMore :message="mes" :show.sync="showLoading"></bottomLoadMore>
+        <placeholder></placeholder>
+        <!-- 弹出广告 -->
+        <bombscreen>
+            <!-- 自定义html标签组件
+            将一组功能封装到一个component里，且在页面上可以用自定义标签的形式引入 -->
+        </bombscreen>
+        <comment>
+            <comment-input></comment-input>
+            <comment-list>
+                <comment-item></comment-item>
+            </comment-list>
+        </comment>
+    </template>
+    <script>
+        // wepy在本地的node_modules下 直接引用
+        import wepy from 'wepy';
+        // 将页面换一个视角（切页面）， 组件视角（粗，大体）
+        import Discover from '@/components/discover';
+        import BottomLoadMore from '@/components/bottomLoadMore';
+        import Placeholder from '@/components/placeholder';
+        import Bombscreen from '@/components/bomb_screen';
+        // 单页面组件
+        export default class Home extends wepy.page {
+            // 不是json ，es6 class
+            data = {
+                showLoading: true,
+                mes: '加载更多...'
+            }
+            onLoad() {
+                this.showLoading = true;
+            }
+            // 页面的组件构成 多人协作，将复杂度细化，
+            // 代码可读性更强
+            components = {
+                discover: Discover,
+                bottomLoadMore: BottomLoadMore,
+                placeholder: Placeholder,
+                bombscreen: Bombscreen
+            }
+        }
+    </script>
+    <style lang="less">
+    
+    </style>
