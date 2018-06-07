@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/recharge/recharge",
+    "pages/record/record",
+    
+    
+    "pages/index/index",
+    "pages/electric/electric",
+    "pages/card/card",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#b1b1b1",
+    "selectedColor": "#49be25",
+    "backgroundColor": "#fcfcfc",
+    "borderStyle": "#dcdcdc",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "课表",
+        "iconPath": "/images/icon_index.png",
+        "selectedIconPath": "/images/icon_index_hl.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/icon_home.png",
+        "selectedIconPath": "/images/icon_home_hl.png"
+      }
+    ]
+  }
+}
