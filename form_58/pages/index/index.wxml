@@ -1,0 +1,17 @@
+<view class="container">
+  <form>
+    <input type="number" class="input" placeholder="请输入手机号" bindinput="getNumber" value="{{inputVal}}" maxlength="11">
+    <image class="icon" src="/libs/images/iphone.png" mode="aspectFit"></image>
+    </input>
+    <input type="text" maxlength="6" class="input" placeholder="验证码" bindinput="getTest" value="{{testVal}}">
+    <image class="icon" src="/libs/images/yanzhengma.png" mode="aspectFit"></image>
+    <button size="mini" class="testCode">获取验证码</button>
+    </input>
+    <button class="entry" type="warn" disabled="{{!inputVal || !testVal}}">登录</button>
+  </form>
+</view>
+<view class="footer">
+  <text class="third">使用第三方登录</text>
+  <image bindtap="go" class="weentry" src="/libs/images/weentry.png" mode="aspectFit"></image>
+  <text class="entryText" >微信登录</text>
+</view>
