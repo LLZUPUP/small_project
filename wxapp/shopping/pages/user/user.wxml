@@ -1,9 +1,0 @@
-<view class="main">
-    <!-- 头像 昵称 文字
-    要做一个垂直居中 -->
-    <view class="header">
-        <open-data class="thumb" type="userAvatarUrl"></open-data>
-        <open-data class="nickname" lang="zh_CN" type="userNickName"></open-data>
-        <text class="about">关于我们</text>
-    </view>
-</view>
