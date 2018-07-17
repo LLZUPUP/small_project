@@ -47,7 +47,7 @@ export default {
       // 获取系统消息
       let info = await wxp.getSystemInfo();
       this.winWidth = info.windowWidth;
-      this.winHeight = info.windowHeight
+      this.winHeight = info.windowHeight;
   },
 
 }
